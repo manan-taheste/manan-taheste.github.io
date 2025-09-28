@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manan Taheste – Portfolio</title>
+  <meta name="description" content="Portfolio of Manan Taheste – 3rd‑year Electrical Engineering student at Tel Aviv University. Projects in Verilog, digital design, and software." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0b0c0f; --card:#12141a; --text:#eaeef3; --muted:#a8b0bd; --acc:#7bc9ff; --border:#222633; --shadow:rgba(0,0,0,0.35);} 
+    @media (prefers-color-scheme: light){ :root {--bg:#f7f9fc; --card:#ffffff; --text:#0b0c0f; --muted:#556176; --acc:#056; --border:#e6e9ef; --shadow:rgba(0,0,0,0.06);} }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial;color:var(--text);background:radial-gradient(1200px 600px at 80% -10%,rgba(123,201,255,.08),transparent 60%),var(--bg);}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    .nav{position:sticky;top:0;z-index:20;display:flex;gap:16px;justify-content:space-between;align-items:center;backdrop-filter:saturate(1.2) blur(10px);background:color-mix(in oklab,var(--bg),transparent 70%);border-bottom:1px solid var(--border)}
+    .nav a{color:var(--muted);text-decoration:none;padding:16px 10px;font-weight:600}
+    .nav a:hover{color:var(--text)}
+    .brand{font-weight:800}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:46px 0}
+    .hero h1{font-size:clamp(28px,5vw,46px);margin:0 0 8px}
+    .hero p{margin:0 0 14px;color:var(--muted);line-height:1.65}
+    .btn{display:inline-block;background:var(--text);color:var(--bg);border:1px solid var(--border);border-radius:14px;padding:10px 14px;text-decoration:none;font-weight:700;box-shadow:0 10px 30px var(--shadow)}
+    .btn.ghost{background:transparent;color:var(--text)}
+    .section{padding:30px 0}
+    .section h2{font-size:clamp(22px,3.5vw,30px);margin:0 0 16px}
+    .card{background:linear-gradient(180deg,color-mix(in oklab,var(--card),transparent 10%),var(--card));border:1px solid var(--border);border-radius:18px;box-shadow:0 14px 40px var(--shadow);padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .project{grid-column:span 12}
+    .project img{width:100%;height:320px;object-fit:cover;border-radius:12px;border:1px solid var(--border);background:#0d1117}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:4px 8px;border-radius:999px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:transparent;border:1px dashed var(--border);color:var(--muted);padding:6px 10px;border-radius:999px;font-weight:600}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+    .kpi{text-align:center;border:1px dashed var(--border);border-radius:12px;padding:10px;color:var(--muted)}
+    .footer{margin:36px 0 14px;color:var(--muted);text-align:center;font-size:14px}
+    .muted{color:var(--muted)}
+    @media(max-width:920px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.project{grid-column:span 1}.about{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="nav container">
+    <div class="brand">Manan Taheste</div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/manan-taheste" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/manan-taheste/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Electrical Engineering @ TAU • Exploring Hardware & Software</h1>
+        <p>
+          I’m a third‑year Electrical Engineering student at Tel Aviv University with four semesters remaining. I focus on projects at the intersection of hardware and software, building practical systems and documenting them clearly—like a synthesizable <strong>8‑bit ALU</strong> with a self‑checking testbench and waveform validation.
+        </p>
+        <div class="kpis">
+          <div class="kpi">Verilog • Vivado</div>
+          <div class="kpi">MATLAB • Python • C#</div>
+          <div class="kpi">Signals • Logic Design</div>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="#projects">See my work</a>
+          <a class="btn ghost" href="#contact">Contact me</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://dummyimage.com/1200x700/0d1117/ffffff&text=ALU+Waveform+Preview" alt="ALU waveform preview" style="width:100%;border-radius:12px;border:1px solid var(--border)"/>
+        <p class="muted" style="margin:10px 0 0">Replace with your own screenshot from Vivado (add to <code>images/alu_waveform.png</code>).</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <!-- 8-bit ALU Card -->
+        <article class="project card">
+          <img src="https://dummyimage.com/1600x1000/0d1117/ffffff&text=8-bit+ALU" alt="8-bit ALU project cover" />
+          <div>
+            <h3>8‑bit ALU (Verilog)</h3>
+            <p class="muted">Arithmetic & logic ops (ADD, SUB, AND, OR, XOR, SHL, SHR, SLT). Includes a clean, self‑checking testbench and waveform validation.</p>
+            <div class="tags">
+              <span class="tag">Verilog</span><span class="tag">Vivado</span><span class="tag">Digital Design</span>
+            </div>
+            <p style="margin:10px 0 0;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn" href="https://github.com/manan-taheste/8bit_alu" target="_blank" rel="noopener">Code</a>
+            </p>
+          </div>
+        </article>
+      </div>
+      <p class="muted" style="margin-top:16px">😊 More projects coming soon in the near future.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="about">
+        <div class="card">
+          <p>
+            I am a third‑year Electrical Engineering student at Tel Aviv University with four semesters remaining. I’m passionate about opportunities in the semiconductor and embedded systems industry, and I enjoy working at the intersection of hardware and software.
+          </p>
+          <p class="muted" style="margin-top:8px">Currently seeking a student position (2–3 days/week) in chip design, design verification, or embedded systems.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Skills</h3>
+          <div class="skills">
+            <span class="skill">Verilog (Vivado)</span>
+            <span class="skill">Python (OOP)</span>
+            <span class="skill">C#</span>
+            <span class="skill">MATLAB</span>
+            <span class="skill">Git</span>
+          </div>
+          <h3 style="margin:14px 0 8px">Relevant Coursework</h3>
+          <ul class="muted" style="padding-left:18px">
+            <li>Signals & Systems</li>
+            <li>Logic Design</li>
+            <li>Data Structures & Algorithms</li>
+            <li>Electromagnetics, Electronic Devices</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:manantaheste@mail.tau.ac.il">manantaheste@mail.tau.ac.il</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/manan-taheste/" target="_blank" rel="noopener">/in/manan-taheste</a></p>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Manan Taheste • Built with HTML/CSS • Ready for GitHub Pages</footer>
+  </main>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
