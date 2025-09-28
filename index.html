@@ -38,6 +38,8 @@
     .kpi{text-align:center;border:1px dashed var(--border);border-radius:12px;padding:10px;color:var(--muted)}
     .footer{margin:36px 0 14px;color:var(--muted);text-align:center;font-size:14px}
     .muted{color:var(--muted)}
+    .contact-links a{display:inline-block;margin-right:12px;padding:8px 14px;border:1px solid var(--border);border-radius:12px;text-decoration:none;font-weight:600;color:var(--text);background:var(--card);box-shadow:0 4px 16px var(--shadow)}
+    .contact-links a:hover{background:var(--text);color:var(--bg)}
     @media(max-width:920px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.project{grid-column:span 1}.about{grid-template-columns:1fr}}
   </style>
 </head>
@@ -72,8 +74,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="https://dummyimage.com/1200x700/0d1117/ffffff&text=ALU+Waveform+Preview" alt="ALU waveform preview" style="width:100%;border-radius:12px;border:1px solid var(--border)"/>
-        <p class="muted" style="margin:10px 0 0">Replace with your own screenshot from Vivado (add to <code>images/alu_waveform.png</code>).</p>
+        <img src="images/alu_waveform.png" alt="ALU waveform preview" style="width:100%;border-radius:12px;border:1px solid var(--border)"/>
       </div>
     </section>
 
@@ -83,7 +84,7 @@
       <div class="grid">
         <!-- 8-bit ALU Card -->
         <article class="project card">
-          <img src="https://dummyimage.com/1600x1000/0d1117/ffffff&text=8-bit+ALU" alt="8-bit ALU project cover" />
+          <img src="images/alu_schematic.png" alt="8-bit ALU schematic" />
           <div>
             <h3>8‑bit ALU (Verilog)</h3>
             <p class="muted">Arithmetic & logic ops (ADD, SUB, AND, OR, XOR, SHL, SHR, SLT). Includes a clean, self‑checking testbench and waveform validation.</p>
@@ -132,11 +133,13 @@
     <!-- CONTACT -->
     <section id="contact" class="section card">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:manantaheste@mail.tau.ac.il">manantaheste@mail.tau.ac.il</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/manan-taheste/" target="_blank" rel="noopener">/in/manan-taheste</a></p>
+      <div class="contact-links">
+        <a href="mailto:manantaheste@mail.tau.ac.il">Email Me</a>
+        <a href="https://www.linkedin.com/in/manan-taheste/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </section>
 
-    <footer class="footer">© <span id="year"></span> Manan Taheste • Built with HTML/CSS • Ready for GitHub Pages</footer>
+    <footer class="footer">© <span id="year"></span> Manan Taheste</footer>
   </main>
 
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
